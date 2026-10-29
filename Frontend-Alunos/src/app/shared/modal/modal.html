@@ -1,0 +1,28 @@
+<div class="modal-custom" [class.ativo]="show">
+  <div class="modal-card">
+    <div class="success-icon mb-4" [ngStyle]="{ background: color }">
+      <i class="bi" [ngClass]="icon"></i>
+    </div>
+
+    <h4 class="fw-bold mb-2">{{ title }}</h4>
+
+    <p class="text-muted mb-4">
+      {{ message }}
+      <span class="fw-semibold" [ngStyle]="{ color: color }">
+        {{ highlightText }}
+      </span>
+    </p>
+
+    <div class="d-flex gap-2">
+      <button *ngIf="cancelText" class="btn btn-outline-secondary w-100" (click)="onCancel()">
+        {{ cancelText }}
+      </button>
+
+      <button class="btn-confirm w-100" [ngStyle]="{ background: color }" (click)="onConfirm()">
+        {{ confirmText }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop-custom" *ngIf="show"></div>

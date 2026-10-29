@@ -1,0 +1,44 @@
+services:
+  frontend:
+    build:
+      context: ./Frontend-Alunos
+    environment:
+      # Coolify: gera o dominio publico e roteia para a porta 80 deste container
+      - SERVICE_FQDN_FRONTEND_80
+      - BACKEND_URL=http://backend:8080
+    depends_on:
+      - backend
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./Backend-Alunos
+    environment:
+      - DB_URL=jdbc:postgresql://postgres:5432/${POSTGRES_DB:-agrupa}
+      - DB_USERNAME=${SERVICE_USER_POSTGRES:-agrupa}
+      - DB_PASSWORD=${SERVICE_PASSWORD_POSTGRES:-agrupa}
+      - DDL_AUTO=update
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-agrupa}
+      - POSTGRES_USER=${SERVICE_USER_POSTGRES:-agrupa}
+      - POSTGRES_PASSWORD=${SERVICE_PASSWORD_POSTGRES:-agrupa}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  postgres-data:

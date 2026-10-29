@@ -1,0 +1,25 @@
+<div class="page-bg">
+  <div class="container py-4">
+    <app-header title="QR Code - Atividade TAT" subtitle="Compartilhe o QR Code ou link com os alunos"></app-header>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-12">
+        <div class="card shadow-sm text-center p-4">
+          <h5 class="fw-bold mb-2">QR Code da Sessão</h5>
+          <p class="text-muted mb-4">Escaneie o QR Code para acessar a sessão</p>
+
+          <div class="qr-wrapper mb-2" *ngIf="qrCodeDataUrl">
+            <img [src]="qrCodeDataUrl" alt="QR Code da Sessão" class="img-fluid" />
+          </div>
+
+          <div class="session-code mt-2 mb-3" *ngIf="sessionCode">
+            Código da sessão: <span class="code">{{ sessionCode }}</span>
+          </div>
+
+          <p class="text-muted small" *ngIf="!qrCodeDataUrl">Gerando QR Code...</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

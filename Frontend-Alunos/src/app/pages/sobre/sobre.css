@@ -1,0 +1,72 @@
+
+.sobre-card {
+  border-radius: 12px;
+  border: 1px solid #eef1f4;
+  background: #fff;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.04);
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-item {
+  background: #f1f5f9;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #334155;
+}
+
+.dev-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f9fafb;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+.dev-avatar {
+  width: 42px;
+  height: 42px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dev-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.dev-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.dev-links a {
+  color: #6b7280;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.dev-links a:hover {
+  color: #2563eb;
+}
+
+.dev-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: 0.5s;
+}

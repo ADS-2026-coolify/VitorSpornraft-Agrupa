@@ -1,0 +1,23 @@
+<app-header title="Entrar em um Grupo" subtitle="Junte-se ao seu grupo de estudo" backLink="/"></app-header>
+
+<div class="page aluno-tema">
+  <div class="page-content">
+    <div class="card">
+
+      <h2>Encontrar Sessão</h2>
+      <p class="subtitle">Informe o código da sessão</p>
+
+      <label for="session">Código da Sessão</label>
+      <input id="session" type="text" placeholder="Cole o código da sessão" [(ngModel)]="sessionId" />
+
+      <small *ngIf="error" class="helper error">
+        Código inválido ou não informado
+      </small>
+
+      <button class="btn-confirm" (click)="entrar()" [disabled]="!sessionId || !sessionId.trim()">
+        Buscar Sessão
+      </button>
+
+    </div>
+  </div>
+</div>

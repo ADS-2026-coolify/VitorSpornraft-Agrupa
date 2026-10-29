@@ -1,0 +1,21 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Backend
+Backend-Alunos/target/
+Backend-Alunos/HELP.md
+
+# Frontend
+Frontend-Alunos/node_modules/
+Frontend-Alunos/dist/
+Frontend-Alunos/.angular/
+
+# Ambiente
+.env
+

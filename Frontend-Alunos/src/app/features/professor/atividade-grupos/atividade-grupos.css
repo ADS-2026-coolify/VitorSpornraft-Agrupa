@@ -1,0 +1,165 @@
+.page-bg {
+  min-height: 100vh;
+  background: linear-gradient(180deg,
+      #eaf7f1 0%,
+      #eef9f5 45%,
+      #f3faf7 100%);
+  color: #111827;
+}
+
+.page-content {
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+
+.grupo-card {
+  border-radius: 12px;
+  border: 1px solid #eef1f4;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .04);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.grupo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .06);
+}
+
+.grupo-card .card-body {
+  padding: 10px;
+}
+
+.grupo-card .d-flex.align-items-center {
+  margin-top: -6px;
+}
+
+.grupo-card h5 {
+  color: #0f172a;
+}
+
+.grupo-card p {
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.atividade-titulo {
+  margin-left: 20px;
+  font-size: 1.6rem;
+}
+
+.atividade-subtitulo {
+  margin-left: 20px;
+  font-size: 1rem;
+}
+
+.grupo-icon {
+  width: 40px;
+  height: 40px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.grupo-card ul {
+  margin-bottom: 0;
+}
+
+.aluno-item {
+  background: #f9fafb;
+  padding: 5px 8px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.btn-edit {
+  padding: 6px 8px;
+}
+
+.btn-acao {
+  margin-right: 20px;
+}
+
+.btn-qrcode {
+  background: #00c27a;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border: none;
+}
+
+.btn-qrcode:hover {
+  background: #00b06f;
+  color: #fff;
+}
+
+.modal-custom {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1050;
+}
+
+.modal-custom.ativo {
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  max-width: 420px;
+  width: 100%;
+  color: #111827;
+  opacity: 0;
+  transform: scale(.95);
+  transition: .25s ease;
+}
+
+.modal-custom.ativo .modal-card {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  z-index: 1040;
+}
+
+.aluno-edit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.custom-spinner {
+  width: 70px;
+  height: 70px;
+  border-width: 6px;
+}
+
+.err-icon {
+  font-size: 50px;
+  color: #dc3545;
+}

@@ -1,0 +1,70 @@
+.page-bg {
+  background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
+  min-height: 100vh;
+}
+
+.qr-wrapper {
+  background: linear-gradient(135deg, #e8f5ff, #eafff6);
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.qr-wrapper img {
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.grupo-item {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatars {
+  display: flex;
+  gap: 6px;
+}
+
+.session-code {
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.session-code .code {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #e8f5e9;
+  color: #00c27a;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.btn-copy-session {
+  background-color: #00c27a;
+  color: #fff;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-copy-session:hover {
+  background-color: #00b06f;
+}
+
+.btn-acao-principal {
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .2s ease;
+}

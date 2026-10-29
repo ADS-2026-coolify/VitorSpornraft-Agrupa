@@ -1,0 +1,82 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
+  padding: 32px 24px;
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+
+.card {
+  width: 100%;
+  max-width: 700px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  margin-bottom: 24px;
+  color: #555;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.helper {
+  display: block;
+  margin: 8px 0 20px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.helper.error {
+  color: #dc2626;
+}
+
+.btn-confirm {
+  width: 100%;
+  padding: 7px;
+  border-radius: 10px;
+  border: none;
+  background: #00b56a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-confirm:hover:not(:disabled) {
+  background: #00a868;
+}
+
+.btn-confirm:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,184 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
+  padding: 32px 24px;
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  width: 100%;
+  max-width: 700px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  height: auto;
+  min-height: unset;
+}
+
+.card h2 {
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  margin-bottom: 24px;
+  color: #555;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 5px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+.helper {
+  display: block;
+  margin: 8px 0 20px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 7px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.success-modal {
+  border-radius: 20px;
+  border: none;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #00c27a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+
+
+.btn-confirm {
+  background-color: #00b56a;
+  border-color: #00b56a;
+}
+
+.btn-confirm:hover {
+  background-color: #00a868;
+}
+
+.err-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #c20000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.btn-err {
+  background-color: #b50000;
+  border-color: #b50000;
+}
+
+.btn-err:hover {
+  background-color: #5f0b0b;
+}
+
+.modal-custom {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1050;
+}
+
+.modal-custom.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 420px;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal-custom.ativo .modal-card {
+  transform: scale(1);
+}
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1040;
+  animation: fadeBg 0.3s ease forwards;
+}
+
+@keyframes fadeBg {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.success-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #5ec555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.success-icon i {
+  font-size: 44px;
+  color: #fff;
+}

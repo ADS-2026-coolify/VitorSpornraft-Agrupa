@@ -1,0 +1,98 @@
+
+.modal-custom {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1050;
+}
+
+.modal-custom.ativo {
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.modal-custom.ativo .modal-card {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1040;
+  animation: fadeBg 0.5s ease forwards;
+}
+
+@keyframes fadeBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.success-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.success-icon i {
+  font-size: 44px;
+  color: #fff;
+}
+
+
+.modal-btn {
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  transition:
+    background-color 0.5s ease,
+    border-color 0.5s ease,
+    filter 0.5s ease;
+}
+
+
+.btn-confirm {
+  border: none;
+  color: #fff;
+}
+
+.btn-confirm:hover {
+  filter: brightness(0.9);
+}
+
+
+.btn-cancel {
+  background: transparent;
+  border: 2px solid #ced4da;
+  color: #6c757d;
+}
+
+.btn-cancel:hover {
+  background: #f1f3f5;
+  border-color: #adb5bd;
+}
