@@ -4,7 +4,7 @@ services:
       context: ./Frontend-Alunos
     environment:
       # Coolify: gera o dominio publico e roteia para a porta 80 deste container
-      - SERVICE_FQDN_FRONTEND_80
+      - SERVICE_FQDN_FRONTEND_3000
       - BACKEND_URL=http://backend:8080
     depends_on:
       - backend
